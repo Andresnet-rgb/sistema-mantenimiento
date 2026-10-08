@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Mantenimiento</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #1e3a8a,
+                #2563eb,
+                #0ea5e9
+            );
+        }
+
+        .contenedor-login {
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
+        }
+
+        .tarjeta-login {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.20);
+
+            text-align: center;
+        }
+
+        .icono {
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #2563eb;
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 32px;
+        }
+
+        .titulo {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .subtitulo {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .campo {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .campo label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #334155;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .campo input {
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+        .campo input:focus {
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .boton-login {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 5px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .boton-login:hover {
+            background: #1d4ed8;
+
+            transform: translateY(-1px);
+        }
+
+        .pie-login {
+            margin-top: 25px;
+
+            color: #94a3b8;
+
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+
+            .contenedor-login {
+                padding: 15px;
+            }
+
+            .tarjeta-login {
+                padding: 30px 25px;
+            }
+
+            .titulo {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor-login">
+
+        <div class="tarjeta-login">
+
+            <div class="icono">
+                🔧
+            </div>
+
+            <h1 class="titulo">
+                Sistema de Mantenimiento
+            </h1>
+
+            <p class="subtitulo">
+                Gestión y seguimiento de reportes
+            </p>
+
+            <form
+                action="../backend/auth/login.php"
+                method="POST"
+            >
+
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="Ingrese su correo"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Ingrese su contraseña"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton-login"
+                >
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+
+            <div class="pie-login">
+                Sistema de gestión de mantenimiento
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
